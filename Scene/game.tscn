@@ -23,11 +23,6 @@ environment = SubResource("Environment_olkej")
 
 [node name="Player" parent="." instance=ExtResource("1_3j4q6")]
 transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257757, 0, -0.0257757, 0.999668, 1, 1.38826, 2.82422)
-KEY_BIND_UP = "up"
-KEY_BIND_LEFT = "left"
-KEY_BIND_RIGHT = "right"
-KEY_BIND_DOWN = "down"
-KEY_BIND_JUMP = "jump"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.801796, 0.597597, 0, -0.597597, 0.801796, 0.105781, 7.91738, 11.7353)

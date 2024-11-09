@@ -9,6 +9,11 @@
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_gliks")
+KEY_BIND_UP = "up"
+KEY_BIND_LEFT = "left"
+KEY_BIND_RIGHT = "right"
+KEY_BIND_DOWN = "down"
+KEY_BIND_JUMP = "jump"
 
 [node name="Head" parent="." instance=ExtResource("2_lju1r")]
 

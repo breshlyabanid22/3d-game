@@ -1,34 +1,29 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwe3awjmbti2w"]
+[gd_scene load_steps=7 format=3 uid="uid://dwe3awjmbti2w"]
 
 [ext_resource type="Texture2D" uid="uid://cayctslmjpj3i" path="res://textures/rocky_terrain_diff_4k.png" id="1_pwo5c"]
-[ext_resource type="Texture2D" uid="uid://cddj1obb87wyt" path="res://textures/rocky_terrain_nor_gl_4k.png" id="2_mj8ln"]
-[ext_resource type="Texture2D" uid="uid://bssugqsp4cjd1" path="res://textures/rocky_terrain_rough_4k.png" id="3_4ttu7"]
+[ext_resource type="Texture2D" uid="uid://cddj1obb87wyt" path="res://textures/rocky_terrain_nor_gl_4k.png" id="2_nqe4w"]
+[ext_resource type="Texture2D" uid="uid://bssugqsp4cjd1" path="res://textures/rocky_terrain_rough_4k.png" id="3_ivvt7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_no5to"]
-size = Vector3(100, 1, 100)
+size = Vector3(300, 1, 300)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vm1ft"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_01jqx"]
 albedo_texture = ExtResource("1_pwo5c")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oclht"]
-albedo_texture = ExtResource("1_pwo5c")
-roughness_texture = ExtResource("3_4ttu7")
+roughness_texture = ExtResource("3_ivvt7")
 normal_enabled = true
-normal_texture = ExtResource("2_mj8ln")
-uv1_scale = Vector3(60, 60, 60)
+normal_texture = ExtResource("2_nqe4w")
+uv1_scale = Vector3(100, 100, 1)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_rtdf6"]
-material = SubResource("StandardMaterial3D_oclht")
+[sub_resource type="PlaneMesh" id="PlaneMesh_5bd8j"]
+material = SubResource("StandardMaterial3D_01jqx")
+size = Vector2(300, 300)
 
 [node name="Ground" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_no5to")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_vm1ft")
-mesh = SubResource("PlaneMesh_rtdf6")
+mesh = SubResource("PlaneMesh_5bd8j")
